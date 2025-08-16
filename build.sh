@@ -24,9 +24,15 @@ mkdir -p public
 mkdir -p public/versions
 
 # Checkout and build main site
-git checkout $MAIN_REF
-GIT_HASH=$(git rev-parse --short HEAD)
-echo "Building main site from $MAIN_REF (commit: $GIT_HASH)"
+if git rev-parse --verify "$MAIN_REF" >/dev/null 2>&1; then
+  git checkout $MAIN_REF
+  GIT_HASH=$(git rev-parse --short HEAD)
+  echo "Building main site from $MAIN_REF (commit: $GIT_HASH)"
+else
+  echo "Warning: $MAIN_REF not found, using current branch"
+  GIT_HASH=$(git rev-parse --short HEAD)
+  echo "Building main site from current branch (commit: $GIT_HASH)"
+fi
 hugo \
   --minify \
   --themesDir=../.. --source=exampleSite \
@@ -37,16 +43,20 @@ hugo \
 for VERSION in "${VERSIONS[@]}"; do
   IFS=':' read -r REF NAME <<< "$VERSION"
 
-  git checkout $REF
-  GIT_HASH=$(git rev-parse --short HEAD)
-  echo "Building version $NAME from $REF (commit: $GIT_HASH)"
+  if git rev-parse --verify "$REF" >/dev/null 2>&1; then
+    git checkout $REF
+    GIT_HASH=$(git rev-parse --short HEAD)
+    echo "Building version $NAME from $REF (commit: $GIT_HASH)"
 
-  mkdir -p "public/versions/$NAME"
-  hugo \
-    --minify \
-    --themesDir=../.. --source=exampleSite \
-    --baseURL "$BASE_URL/versions/$NAME/" \
-    --destination="../public/versions/$NAME"
+    mkdir -p "public/versions/$NAME"
+    hugo \
+      --minify \
+      --themesDir=../.. --source=exampleSite \
+      --baseURL "$BASE_URL/versions/$NAME/" \
+      --destination="../public/versions/$NAME"
+  else
+    echo "Warning: $REF not found, skipping version $NAME"
+  fi
 done
 
 # Return to main branch
