@@ -1,3 +1,5 @@
+---
+---
 - ## Prologue
     - [Release Notes](/docs/{{version}}/releases)
     - [Upgrade Guide](/docs/{{version}}/upgrade)

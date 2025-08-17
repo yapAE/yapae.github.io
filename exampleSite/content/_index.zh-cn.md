@@ -11,13 +11,13 @@ layout: hextra-home
 
 <div class="hx:mt-6 hx:mb-6">
 {{< hextra/hero-headline >}}
-  创建现代化网站&nbsp;<br class="hx:sm:block hx:hidden" />由 Markdown 和 Hugo 驱动
+  Beyond Geek Guide (B-GG.com) is your go-to hub for easy-to-follow tech tutorials, software guides, and practical tips.
 {{< /hextra/hero-headline >}}
 </div>
 
 <div class="hx:mb-12">
 {{< hextra/hero-subtitle >}}
-  极速且全能的 Hugo 主题框架&nbsp;<br class="hx:sm:block hx:hidden" />为构建现代化的静态网站而生
+  Whether you’re a complete beginner or a tech enthusiast, we break down complex tools and concepts into simple, step-by-step guides. Our mission is to make technology accessible for everyone — so you can work smarter, stay secure, and explore the digital world with confidence.
 {{< /hextra/hero-subtitle >}}
 </div>
 
