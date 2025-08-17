@@ -22,7 +22,7 @@ languages:
   en:
     languageName: English
     weight: 1
-    title: B-GG Beyond Geek Guide
+    title: B-GG
   fa:
     languageName: فارسی
     languageCode: fa
@@ -33,12 +33,12 @@ languages:
     languageName: 日本語
     languageCode: ja
     weight: 3
-    title: B-GG Beyond Geek Guide
+    title: B-GG
   zh-cn:
     languageName: 简体中文
     languageCode: zh-CN
     weight: 4
-    title: B-GG Beyond Geek Guide
+    title: B-GG
 
 module:
   hugoVersion:
