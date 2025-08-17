@@ -60,8 +60,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Focus the search input when pressing ctrl+k/cmd+k or /.
   document.addEventListener('keydown', function (e) {
-    const { inputElement } = getActiveSearchElement();
-    if (!inputElement) return;
+    const activeSearchElement = getActiveSearchElement();
+    if (!activeSearchElement) return;
+    const { inputElement } = activeSearchElement;
 
     const activeElement = document.activeElement;
     const tagName = activeElement && activeElement.tagName;
@@ -86,8 +87,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Dismiss the search results when clicking outside the search box.
   document.addEventListener('mousedown', function (e) {
-    const { inputElement, resultsElement } = getActiveSearchElement();
-    if (!inputElement || !resultsElement) return;
+    const activeSearchElement = getActiveSearchElement();
+    if (!activeSearchElement) return;
+    const { inputElement, resultsElement } = activeSearchElement;
     if (
       e.target !== inputElement &&
       e.target !== resultsElement &&
@@ -100,8 +102,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Get the currently active result and its index.
   function getActiveResult() {
-    const { resultsElement } = getActiveSearchElement();
-    if (!resultsElement) return { result: undefined, index: -1 };
+    const activeSearchElement = getActiveSearchElement();
+    if (!activeSearchElement) return { result: undefined, index: -1 };
+    const { resultsElement } = activeSearchElement;
 
     const result = resultsElement.querySelector('.hextra-search-active');
     if (!result) return { result: undefined, index: -1 };
@@ -112,8 +115,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Set the active result by index.
   function setActiveResult(index) {
-    const { resultsElement } = getActiveSearchElement();
-    if (!resultsElement) return;
+    const activeSearchElement = getActiveSearchElement();
+    if (!activeSearchElement) return;
+    const { resultsElement } = activeSearchElement;
 
     const { result: activeResult } = getActiveResult();
     activeResult && activeResult.classList.remove('hextra-search-active');
@@ -126,30 +130,34 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Get the number of search results from the DOM.
   function getResultsLength() {
-    const { resultsElement } = getActiveSearchElement();
-    if (!resultsElement) return 0;
+    const activeSearchElement = getActiveSearchElement();
+    if (!activeSearchElement) return 0;
+    const { resultsElement } = activeSearchElement;
     return resultsElement.dataset.count;
   }
 
   // Finish the search by hiding the results and clearing the input.
   function finishSearch() {
-    const { inputElement } = getActiveSearchElement();
-    if (!inputElement) return;
+    const activeSearchElement = getActiveSearchElement();
+    if (!activeSearchElement) return;
+    const { inputElement } = activeSearchElement;
     hideSearchResults();
     inputElement.value = '';
     inputElement.blur();
   }
 
   function hideSearchResults() {
-    const { resultsElement } = getActiveSearchElement();
-    if (!resultsElement) return;
+    const activeSearchElement = getActiveSearchElement();
+    if (!activeSearchElement) return;
+    const { resultsElement } = activeSearchElement;
     resultsElement.classList.add('hx:hidden');
   }
 
   // Handle keyboard events.
   function handleKeyDown(e) {
-    const { inputElement } = getActiveSearchElement();
-    if (!inputElement) return;
+    const activeSearchElement = getActiveSearchElement();
+    if (!activeSearchElement) return;
+    const { inputElement } = activeSearchElement;
 
     const resultsLength = getResultsLength();
     const { result: activeResult, index: activeIndex } = getActiveResult();
@@ -312,7 +320,9 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    const { resultsElement } = getActiveSearchElement();
+    const activeSearchElement = getActiveSearchElement();
+    if (!activeSearchElement) return;
+    const { resultsElement } = activeSearchElement;
     while (resultsElement.firstChild) {
       resultsElement.removeChild(resultsElement.firstChild);
     }
@@ -380,8 +390,9 @@ document.addEventListener("DOMContentLoaded", function () {
    * @param {string} query - The search query.
    */
   function displayResults(results, query) {
-    const { resultsElement } = getActiveSearchElement();
-    if (!resultsElement) return;
+    const activeSearchElement = getActiveSearchElement();
+    if (!activeSearchElement) return;
+    const { resultsElement } = activeSearchElement;
 
     if (!results.length) {
       resultsElement.innerHTML = `<span class="hextra-search-no-result">{{ $noResultsFound | safeHTML }}</span>`;
