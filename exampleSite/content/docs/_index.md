@@ -8,5 +8,8 @@ Welcome to Beyond Geek Guide documentation. Here you'll find comprehensive guide
 {{< cards >}}
   {{< card link="hextra" title="Hextra Theme" icon="sparkles" subtitle="Learn how to use the Hextra Hugo theme for building modern, responsive documentation sites." >}}
 {{< /cards >}}
+{{< cards >}}
+  {{< card link="laravel/docs" title="Laravele 12.x icon="sparkles" subtitle="Learn how to use the Hextra Hugo theme for building modern, responsive documentation sites." >}}
+{{< /cards >}}
 
 More documentation sections will be added soon. Stay tuned for updates!
