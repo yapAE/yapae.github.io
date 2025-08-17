@@ -1,5 +1,5 @@
 ---
-title: Hextra Theme
+title: B-GG
 layout: hextra-home
 ---
 
@@ -11,13 +11,13 @@ layout: hextra-home
 
 <div class="hx:mt-6 hx:mb-6">
 {{< hextra/hero-headline >}}
-  Build modern websites&nbsp;<br class="hx:sm:block hx:hidden" />with Markdown and Hugo
+  Beyond Geek Guide&nbsp;<br class="hx:sm:block hx:hidden" />with Technology Guides and Documents
 {{< /hextra/hero-headline >}}
 </div>
 
 <div class="hx:mb-12">
 {{< hextra/hero-subtitle >}}
-  Fast, batteries-included Hugo theme&nbsp;<br class="hx:sm:block hx:hidden" />for creating beautiful static websites
+  Whether you’re a complete beginner or a tech enthusiast,&nbsp;<br class="hx:sm:block hx:hidden" /> we break down complex tools and concepts into simple, step-by-step guides.
 {{< /hextra/hero-subtitle >}}
 </div>
 
