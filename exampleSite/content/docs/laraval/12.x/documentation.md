@@ -1,4 +1,6 @@
 ---
+title: Laravel 12.x
+weight: 1
 ---
 - ## Prologue
     - [Release Notes](/docs/{{version}}/releases)
