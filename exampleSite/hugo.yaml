@@ -47,7 +47,7 @@ module:
 
   workspace: hugo.work
   imports:
-    - path: github.com/yapae/yapae
+    - path: github.com/yapAE/yapae.github.io
 
 markup:
   highlight:
@@ -91,7 +91,7 @@ menu:
         type: search
     - name: GitHub
       weight: 7
-      url: "https://github.com/imfing/hextra"
+      url: "https://github.com/yapae"
       params:
         icon: github
     - identifier: development
