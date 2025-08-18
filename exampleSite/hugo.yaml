@@ -47,7 +47,7 @@ module:
 
   workspace: hugo.work
   imports:
-    - path: github.com/imfing/hextra
+    - path: github.com/yapae/yapae
 
 markup:
   highlight:
@@ -113,10 +113,10 @@ menu:
       name: "About"
       pageRef: "/about"
       weight: 2
-    - identifier: hugoDocs
-      name: "Hugo Docs ↗"
-      url: "https://gohugo.io/documentation/"
-      weight: 3
+    # - identifier: hugoDocs
+    #   name: "Hugo Docs ↗"
+    #   url: "https://gohugo.io/documentation/"
+    #   weight: 3
 
 params:
   description: Modern, responsive, batteries-included Hugo theme for creating beautiful static websites.
@@ -192,15 +192,15 @@ params:
     #   sync: true
 
   comments:
-    enable: false
+    enable: true
     type: giscus
 
     # https://giscus.app/
     giscus:
-      repo: imfing/hextra
-      repoId: R_kgDOJ9fJag
+      repo: yapAE/yapae.github.io
+      repoId: R_kgDOPe_0Vg
       category: General
-      categoryId: DIC_kwDOJ9fJas4CY7gW
+      categoryId: DIC_kwDOPe_0Vs4CuTOP
       # mapping: pathname
       # strict: 0
       # reactionsEnabled: 1

@@ -33,10 +33,10 @@
 </footer>
 
 {{- define "theme-credit" -}}
-  <a class="hx:flex hx:text-sm hx:items-center hx:gap-1 hx:text-current" target="_blank" rel="noopener noreferrer" title="Hextra GitHub Homepage" href="https://github.com/imfing/hextra">
+  <a class="hx:flex hx:text-sm hx:items-center hx:gap-1 hx:text-current" target="_blank" rel="noopener noreferrer" title="B-GG.COM" href="https://b-gg.com">
     <span>
       {{- . | markdownify -}}
-      {{- if strings.Contains . "Hextra" -}}
+      {{- if strings.Contains . "B-GG" -}}
         {{- partial "utils/icon.html" (dict "name" "hextra" "attributes" `height=1em class="hx:inline-block hx:ltr:ml-1 hx:rtl:mr-1 hx:align-[-2.5px]"`) -}}
       {{- end -}}
     </span>
