@@ -13,7 +13,7 @@ hasCJKLanguage: true
 #     ID: G-MEASUREMENT_ID
 
 outputs:
-  home: [html, llms]
+  home: [html]
   page: [html]
   section: [html, rss]
 
