@@ -45,9 +45,8 @@ module:
     extended: true
     min: "0.146.0"
 
-  # workspace: hugo.work
-  # imports:
-  #   - path: github.com/yapAE/yapae.github.io
+  imports:
+    - path: github.com/imfing/hextra
 
 markup:
   highlight:
@@ -197,10 +196,10 @@ params:
 
     # https://giscus.app/
     giscus:
-      repo: yapAE/yapae.github.io
-      repoId: R_kgDOPe_0Vg
+      repo: imfing/hextra
+      repoId: R_kgDOH2vDTM
       category: General
-      categoryId: DIC_kwDOPe_0Vs4CuTOP
+      categoryId: DIC_kwDOH2vDTM4CPBwC
       # mapping: pathname
       # strict: 0
       # reactionsEnabled: 1
