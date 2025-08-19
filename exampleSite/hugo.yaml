@@ -196,10 +196,10 @@ params:
 
     # https://giscus.app/
     giscus:
-      repo: imfing/hextra
-      repoId: R_kgDOH2vDTM
+      repo: yapAE/yapae.github.io
+      repoId: R_kgDOPe_0Vg
       category: General
-      categoryId: DIC_kwDOH2vDTM4CPBwC
+      categoryId: DIC_kwDOPe_0Vs4CuTOP
       # mapping: pathname
       # strict: 0
       # reactionsEnabled: 1
